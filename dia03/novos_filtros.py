@@ -20,3 +20,8 @@ df_produto.drop_duplicates(subset=["primeiroNome"], keep="first")
 
 #%%
 df_produto.drop_duplicates(subset=["primeiroNome", "vlPreco"], keep="first")
+
+#%%
+df_pedido = pd.read_csv("../data/pedido.csv")
+df_pedido.dropna(subset=["txtRecado", "flKetchup"], 
+                 how="all")
